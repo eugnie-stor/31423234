@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>En İyi Kuzenim Emine ❤️</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Great+Vibes&family=Montserrat:wght@300&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+            overflow: hidden;
+            font-family: 'Great Vibes', cursive;
+        }
+        
+        .hearts-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        .heart {
+            position: absolute;
+            font-size: 24px;
+            opacity: 0;
+            animation: float 8s ease-in-out infinite;
+            text-shadow: 0 0 10px rgba(161, 140, 209, 0.7);
+            filter: drop-shadow(0 0 5px rgba(251, 194, 235, 0.5));
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg) scale(0.5);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.8;
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            90% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(720deg) scale(0.5);
+                opacity: 0;
+            }
+        }
+        
+        .message {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            animation: glow 2s infinite alternate;
+            max-width: 80%;
+        }
+        
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 10px rgba(251, 194, 235, 0.5);
+            }
+            to {
+                box-shadow: 0 0 30px rgba(251, 194, 235, 0.8);
+            }
+        }
+        
+        h1 {
+            font-size: 5rem;
+            margin: 0;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+            animation: pulse 1.5s infinite alternate, colorChange 5s infinite;
+            background: linear-gradient(45deg, #a18cd1, #fbc2eb, #a18cd1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            background-size: 300% 300%;
+        }
+        
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.1);
+            }
+        }
+        
+        @keyframes colorChange {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+        .subtitle {
+            font-size: 2rem;
+            margin-top: 20px;
+            color: #fff;
+            font-family: 'Dancing Script', cursive;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            animation: fadeInOut 3s infinite;
+        }
+        
+        @keyframes fadeInOut {
+            0%, 100% {
+                opacity: 0.7;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+        
+        .floating-hearts {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
+        .floating-heart {
+            position: absolute;
+            font-size: 30px;
+            animation: floating 15s linear infinite;
+            opacity: 0.6;
+        }
+        
+        @keyframes floating {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            25% {
+                transform: translate(50vw, 25vh) rotate(90deg);
+            }
+            50% {
+                transform: translate(25vw, 50vh) rotate(180deg);
+            }
+            75% {
+                transform: translate(-25vw, 25vh) rotate(270deg);
+            }
+            100% {
+                transform: translate(0, 0) rotate(360deg);
+            }
+        }
+        
+        .photo-frame {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid white;
+            overflow: hidden;
+            margin: 0 auto 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            animation: rotateFrame 10s infinite linear;
+            background-color: #fbc2eb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        @keyframes rotateFrame {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            margin-top: 20px;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="hearts-container" id="hearts-container"></div>
+    <div class="floating-hearts" id="floating-hearts"></div>
+    
+    <div class="message">
+        <div class="photo-frame">
+            <!-- Buraya Emine'nin fotoğrafını eklemek için img tag'ini kullanabilirsiniz -->
+            <!-- <img src="emine-foto.jpg" alt="Emine"> -->
+            <span style="font-size: 4rem;">👯‍♀️</span>
+        </div>
+        <h1>En İyi Kuzenim Emine</h1>
+        <div class="subtitle">Dünyanın en harika kuzeni!</div>
+        <div class="subtitle">Seni çok seviyorum 💖</div>
+        <div class="signature">Sevgilerimle...</div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Rastgele hareket eden küçük kalpler
+            const container = document.getElementById('hearts-container');
+            const hearts = ['❤️', '💖', '💗', '💓', '💘', '💝', '💞', '💕', '👯‍♀️', '✨'];
+            
+            function createHeart() {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+                
+                // Rastgele pozisyon
+                const startPosX = Math.random() * window.innerWidth;
+                heart.style.left = startPosX + 'px';
+                heart.style.bottom = '-50px';
+                
+                // Rastgele animasyon süresi
+                const duration = 6 + Math.random() * 6;
+                heart.style.animationDuration = duration + 's';
+                
+                // Rastgele boyut
+                const size = 20 + Math.random() * 40;
+                heart.style.fontSize = size + 'px';
+                
+                // Rastgele renk
+                const colors = ['#a18cd1', '#fbc2eb', '#ffb6c1', '#d8bfd8', '#ff69b4'];
+                heart.style.color = colors[Math.floor(Math.random() * colors.length)];
+                
+                // Rastgele gecikme
+                heart.style.animationDelay = Math.random() * 5 + 's';
+                
+                container.appendChild(heart);
+                
+                // Animasyon bittiğinde kalbi kaldır
+                setTimeout(() => {
+                    heart.remove();
+                }, duration * 1000);
+            }
+            
+            // Büyük yüzen kalpler
+            const floatingContainer = document.getElementById('floating-hearts');
+            const bigHearts = ['❤️', '💖', '💗', '👯‍♀️', '✨'];
+            
+            function createFloatingHeart() {
+                const heart = document.createElement('div');
+                heart.className = 'floating-heart';
+                heart.innerHTML = bigHearts[Math.floor(Math.random() * bigHearts.length)];
+                
+                // Rastgele başlangıç pozisyonu
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.top = Math.random() * 100 + 'vh';
+                
+                // Rastgele animasyon süresi
+                const duration = 30 + Math.random() * 30;
+                heart.style.animationDuration = duration + 's';
+                
+                // Rastgele boyut
+                const size = 40 + Math.random() * 60;
+                heart.style.fontSize = size + 'px';
+                
+                floatingContainer.appendChild(heart);
+            }
+            
+            // Başlangıçta birkaç kalp oluştur
+            for (let i = 0; i < 25; i++) {
+                setTimeout(createHeart, i * 300);
+            }
+            
+            // 5 büyük yüzen kalp oluştur
+            for (let i = 0; i < 7; i++) {
+                createFloatingHeart();
+            }
+            
+            // Düzenli olarak yeni kalpler oluştur
+            setInterval(createHeart, 500);
+            
+            // Fare hareketinde ekstra kalpler
+            document.addEventListener('mousemove', function(e) {
+                if (Math.random() > 0.7) {
+                    const mouseHeart = document.createElement('div');
+                    mouseHeart.className = 'heart';
+                    mouseHeart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+                    mouseHeart.style.left = e.clientX + 'px';
+                    mouseHeart.style.top = e.clientY + 'px';
+                    mouseHeart.style.animationDuration = '4s';
+                    mouseHeart.style.fontSize = '30px';
+                    mouseHeart.style.color = '#fbc2eb';
+                    container.appendChild(mouseHeart);
+                    
+                    setTimeout(() => {
+                        mouseHeart.remove();
+                    }, 4000);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
